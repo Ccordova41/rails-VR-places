@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :user_comments
   resources :user_experiences
   resources :experience_categories
   resources :locations
