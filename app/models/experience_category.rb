@@ -1,0 +1,2 @@
+class ExperienceCategory < ApplicationRecord
+end

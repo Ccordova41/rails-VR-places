@@ -1,0 +1,2 @@
+class UserExperience < ApplicationRecord
+end

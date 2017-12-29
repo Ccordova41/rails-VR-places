@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :user_experiences
+  resources :experience_categories
+  resources :locations
+  resources :categories
   resources :experiences
   resources :venues
   devise_for :users

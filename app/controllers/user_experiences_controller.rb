@@ -1,0 +1,2 @@
+class UserExperiencesController < ApplicationController
+end
