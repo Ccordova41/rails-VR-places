@@ -3,5 +3,9 @@ class ApplicationController < ActionController::Base
 
   def hello
     @venues = Venue.all
+    respond_to do |format|
+      format.html { render :hello }
+      format.json { render json: @venues }
+    end
   end
 end
