@@ -12,10 +12,11 @@ location_2 = Location.create!(name: "Littleton, Colorado")
 
 #venues
 venue_1 = Venue.create!(name: "Jump into the Light", description: "Jump Into The Light is America’s first virtual reality cinema, play lab and studio. Located on the Lower East Side of Manhattan, it provides an array of virtual- and augmented-reality experiences: skydive in VR; climb a mountain; fly around the world in 360° video; arcade and gaming experiences.", location_id: location_1.id)
+venue_2 = Venue.create!(name: "VR World", description: "VR World is the largest virtual reality experience center located in North America and the Western Hemisphere. It features the finest and most diverse virtual reality experiences that can be used in a public setting. Unlike other venues that concentrate on a single area or genre, VR World aims to deliver the best of virtual reality taking its guests to as many destinations as possible.", location_id: location_1.id)
 
 #experiences
 experience_1 = Experience.create!(title: "VR Cinema", genre: "cinema", description: "Watch 360 Videos", venue_id: venue_1.id)
-experience_2 = Experience.create!(title: "Mountain Climbing", genre: "nature", description: "Climb heights without the danger", venue_id: venue_1.id)
+experience_2 = Experience.create!(title: "Mountain Climbing", genre: "nature", description: "Climb heights without the danger", venue_id: venue_2.id)
 
 #categories
 action = Category.create!(name: "Action")
