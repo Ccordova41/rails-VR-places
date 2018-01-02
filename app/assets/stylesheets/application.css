@@ -42,5 +42,10 @@ nav ul a:visited {
 
 div.filter p {
   color: #80A1D4;
+}
 
+div#venue_list li {
+  color: red;
+  text-align: right;
+  max-width: 600px; 
 }

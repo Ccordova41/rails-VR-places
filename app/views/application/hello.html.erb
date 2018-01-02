@@ -1,8 +1,12 @@
+
+
 <h1>CATHERINE'S VR WORLD</h1>
 
+<div id="venue_list">
 <% @venues.each do |venue| %>
     <li><%= venue.name %></li>
 <% end %>
+</div>
 
 <% if session[:user_id] %>
   <h1><%= @user.name %></h1>
