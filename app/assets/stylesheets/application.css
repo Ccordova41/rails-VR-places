@@ -13,3 +13,34 @@
  *= require_tree .
  *= require_self
  */
+
+/* page content */
+
+div.content {
+  text-align: right;
+  max-width: 600px;
+  margin: auto;
+  font-size: 13px;
+}
+
+nav {
+  text-align: left;
+  text-transform: uppercase;
+  font-size: 13px;
+}
+
+nav ul a:link {
+  color: #C0B9DD;
+}
+
+nav ul a:visited {
+  color: grey;
+
+}
+
+/* home page */
+
+div.filter p {
+  color: #80A1D4;
+
+}

@@ -1,0 +1,32 @@
+<%= form_for @artwork do |f| %>
+  <div class:"fields_with_errors">
+    <% if @artwork.errors.any? %>
+      <ul>
+        <% @artwork.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    <% end %>
+  <div class:"fields_with_errors">
+
+  <div class="field">
+    <%= f.label :title, 'Title:' %><br>
+    <%= f.text_field :title %>
+  </div>
+  <br>
+  <div class="field">
+    <%= f.label :genre, 'Genre:' %><br>
+    <%= f.text_field :genre %>
+  </div>
+
+  <br>
+  <div class="field">
+    <%= f.label :description, 'Inside scoop:' %><br>
+    <%= f.text_field :description %>
+  </div>
+
+
+  <div class="action">
+    <%= f.submit 'Create Artwork' %>
+  </div>
+<% end %>
