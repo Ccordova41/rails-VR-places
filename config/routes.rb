@@ -1,15 +1,25 @@
 Rails.application.routes.draw do
-  resources :user_comments
-  resources :user_experiences
-  resources :experience_categories
-  resources :locations, only: [:new, :create, :show]
-  resources :categories
-  resources :experiences
-  resources :venues
   devise_for :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "application#hello"
+  get '/hello', to: 'application#hello'
+  get '/current_user', to: 'users#get_current'
+  get '/venues/:id/experiences', to: 'venues#collection'
 
   get '/auth/facebook/callback' => 'sessions#create'
+
+  resources :categories, only: [:index, :new, :create, :show, :destroy] do
+    resources :experiences, only: [:index]
+  end
+
+  resources :experiences, only: [:create, :update]
+  resources :venues, only: [:new, :create, :edit, :update, :destroy]
+  resources :venues, only: [:show] do
+    resources :experiences
+  end
+
+  resources :user_experiences, only: [:create, :destroy]
+  resources :users, only: [:show]
+  resources :locations, only: [:new, :create, :show]
 
 end
