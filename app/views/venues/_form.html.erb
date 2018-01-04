@@ -18,7 +18,13 @@
     <%= f.label :description, 'Inside scoop:' %><br>
     <%= f.text_field :description %>
   </div>
-
+  <br>
+  <div class="field">
+    Choose a Location:
+  <br>
+    <%= f.collection_select :location_id, Location.all, :id, :name  %><br>
+  </div>
+  <br>
 
   <div class="action">
     <%= f.submit %>
