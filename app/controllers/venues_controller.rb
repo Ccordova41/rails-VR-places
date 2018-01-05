@@ -34,6 +34,11 @@ class VenuesController < ApplicationController
       redirect_to root_path
     end
 
+    def collection
+      @experiences = @venue.experiences
+      render json: @experiences
+    end
+
     private
       def venue_params
         params.require(:venue).permit(:name, :description, :location_id, location_attributes: [:name])

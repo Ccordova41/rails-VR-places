@@ -5,7 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
 
-  has_many :user_venues
-  has_many :venues, through: :user_venues
-   
+  has_many :user_experiences
+  has_many :experiences, through: :user_experiences
+
 end

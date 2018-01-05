@@ -1,0 +1,5 @@
+<% if user_signed_in? %>
+  <%= link_to "Edit Experience", edit_experience_path(experience) %> |
+  <%= link_to "Remove Experience", experience_path(experience), method: "delete" %> |
+  <%= link_to "Add Experience", new_experience_experience_path(experience) %><br><br>
+<% end %>

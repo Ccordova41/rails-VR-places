@@ -1,8 +1,10 @@
-<%= form_for @artwork do |f| %>
+<%= form_for experience do |f| %>
+  <%= f.hidden_field :venue_id %>
+
   <div class:"fields_with_errors">
-    <% if @artwork.errors.any? %>
+    <% if @experience.errors.any? %>
       <ul>
-        <% @artwork.errors.full_messages.each do |msg| %>
+        <% @experience.errors.full_messages.each do |msg| %>
           <li><%= msg %></li>
         <% end %>
       </ul>
@@ -21,12 +23,12 @@
 
   <br>
   <div class="field">
-    <%= f.label :description, 'Inside scoop:' %><br>
+    <%= f.label :description, 'Inside scoop(description):' %><br>
     <%= f.text_field :description %>
   </div>
-
+<br>
 
   <div class="action">
-    <%= f.submit 'Create Artwork' %>
+    <%= f.submit 'Create Experience!' %>
   </div>
 <% end %>
