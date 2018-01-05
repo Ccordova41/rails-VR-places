@@ -22,10 +22,16 @@
   <div class="field">
     Choose a Location:
   <br>
-    <%= f.collection_select :location_id, Location.all, :id, :name  %><br>
+    <%= f.collection_select :location_id, Location.all, :id, :name, include_blank: ""  %><br>
   </div>
   <br>
-
+  <div class="field">
+    Or Add One (ex. Dublin, Ireland):<br>
+    <%= f.fields_for :location,venue.build_location do |locations_fields| %>
+      <%= locations_fields.text_field :name %>
+    <% end %>
+  </div>
+  <br>
   <div class="action">
     <%= f.submit %>
   </div>

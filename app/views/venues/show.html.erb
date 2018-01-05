@@ -1,5 +1,9 @@
-<div class="venue">
+<div class="show">
   <h2><%= @venue.name %></h2>
-  <p id="location"><%= @venue.location.name %></p>
-  <p><%= @venue.description %></p>
+  <p id="location">Location: <%= @venue.location.name %></p>
+  <p>Description: <%= @venue.description %></p>
+</div>
+
+<div class="add" id="add">
+  <%= render partial: 'venues/signin', locals: {venue: @venue} %>
 </div>
