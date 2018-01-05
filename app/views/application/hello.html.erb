@@ -1,16 +1,22 @@
 <h1>CATHERINE'S VR WORLD</h1>
 
-<div id="venue_list">
-<% @venues.each do |venue| %>
-    <li><%= venue.name %></li>
-<% end %>
-</div>
+  <div class="filter">
+    <p> Filter awesomeness by Location: </p>
+    <%= form_tag("/", method: "get") do %>
+      <%= select_tag "location", options_from_collection_for_select(Location.all, "id", "name"), include_blank: true %>
+      <%= submit_tag "Select" %>
+    <% end %>
+    <br>
+  </div>
 
-<% if session[:user_id] %>
-  <h1><%= @user.name %></h1>
-  <h2>Email: <%= @user.email %></h2>
-  <h2>Facebook UID: <%= @user.uid %></h2>
-  <img src="<%= @user.image %>">
-<% else %>
-  <br> <%= link_to('Log in with Facebook!', '/auth/facebook') %>
-<% end %>
+
+  <div class="add">
+    <% if user_signed_in? %>
+      <%= link_to "Add Venue", new_venue_path %>
+    <% end %>
+    <br><br>
+  </div>
+
+<div id="venue_list">
+  <ul> </ul>
+</div>
