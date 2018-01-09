@@ -1,0 +1,4 @@
+<% if user_signed_in? %>
+  | <%= link_to "Edit", edit_venue_experience_path(venue, experience) %>
+  | <%= link_to "Remove", venue_experience_path(venue, experience), method: "delete" %>
+<% end %>

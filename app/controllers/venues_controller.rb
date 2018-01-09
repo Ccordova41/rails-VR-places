@@ -30,7 +30,7 @@ class VenuesController < ApplicationController
     end
 
     def best
-      @venues = Venue.most_experiences
+      @venues = Venue.best_experiences
     end
 
     def destroy

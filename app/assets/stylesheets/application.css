@@ -38,6 +38,9 @@ nav ul a:visited {
 
 }
 
+ul {
+  list-style-type: none;
+}
 /* home page */
 
 div.filter p {

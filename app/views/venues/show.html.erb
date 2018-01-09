@@ -7,3 +7,19 @@
 <div class="add" id="add">
   <%= render partial: 'venues/signin', locals: {venue: @venue} %>
 </div>
+
+<div class="collection_list">
+  <h3>Collection</h3>
+  <ul>
+    <% @venue.experiences.each do |experience| %>
+      <li>
+        <%= experience.title %> -
+        <%= experience.genre %> -
+        <br>
+        <%= link_to "View", venue_experience_path(@venue, experience) %>
+        <%= render partial: 'venues/collection_signin', locals: {venue: @venue, experience: experience} %>
+      <br>
+    </li>
+    <% end %>
+  </ul>
+</div>
