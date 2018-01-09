@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+devise_for :users, :controllers => { :omniauth_callbacks => "callbacks" }
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   root to: "application#hello"
   get '/hello', to: 'application#hello'
@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get '/current_user', to: 'users#get_current'
   get '/venues/:id/experiences', to: 'venues#collection'
 
-  get '/auth/facebook/callback' => 'sessions#create'
 
   resources :categories, only: [:index, :new, :create, :show, :destroy] do
     resources :experiences, only: [:index]

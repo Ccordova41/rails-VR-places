@@ -8,4 +8,5 @@ class ApplicationController < ActionController::Base
       format.json { render json: @venues }
     end
   end
-end
+
+ end
