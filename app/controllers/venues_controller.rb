@@ -29,6 +29,10 @@ class VenuesController < ApplicationController
       end
     end
 
+    def best
+      @venues = Venue.most_experiences
+    end
+
     def destroy
       @venue.destroy
       redirect_to root_path

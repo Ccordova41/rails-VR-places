@@ -9,4 +9,9 @@ class UserExperiencesController < ApplicationController
   end
 end
 
+  def destroy
+    @userexperience = UserExperience.find(params[:id])
+    @userexperience.destroy
+    redirect_to user_path(current_user)
+  end
 end

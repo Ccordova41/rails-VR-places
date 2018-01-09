@@ -32,3 +32,9 @@
   <ul>
   </ul>
 </div>
+
+<% if user_signed_in? %>
+  <%= form_for ([@experience, @comments]) do |f| %>
+    <%= render partial: 'user_comments/form', locals: {f: f} %>
+  <% end %>
+<% end %>

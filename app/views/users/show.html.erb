@@ -1,4 +1,17 @@
 
 <div class="show">
-  <h2><%= @user.username %>'s List of VR Experiences'</h2>
+  <h2><%= @user.username %>'s List of VR Experiences</h2>
+</div>
+
+<div class="experience_list">
+  <ul>
+    <% @user.user_experiences.each do |user_experience| %>
+      <li>
+        <% if user_experience%>
+          <%= link_to "#{user_experience.experience.title}  |  #{user_experience.experience.genre} ", venue_experience_path(user_experience.experience.venue, user_experience.experience)%><br>
+          <br><%= link_to "Remove", user_experience_path(user_experience), method: "delete", id: "remove" %><br>
+        <% end %>
+      </li>
+    <% end %>
+  </ul>
 </div>

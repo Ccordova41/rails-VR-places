@@ -1,9 +1,7 @@
 class Venue < ApplicationRecord
 
-  has_many :experiences
+  has_many :experiences, dependent: :destroy
   belongs_to :location
-  has_many :user_venues
-  has_many :users, through: :user_venues
 
   validates :name, uniqueness: true
 
@@ -16,4 +14,7 @@ class Venue < ApplicationRecord
     end
   end
 
+  def self.best_experiences
+    joins(:experiences).group(:id).order("count(*) DESC").limit(3)
+  end
 end

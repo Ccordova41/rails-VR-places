@@ -5,11 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
 
-  has_many :user_experiences
+  has_many :user_experiences, dependent: :destroy
   has_many :experiences, through: :user_experiences
 
   def username
     self.email.split("@")[0]
   end
-  
+
 end
