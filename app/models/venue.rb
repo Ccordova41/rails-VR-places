@@ -4,6 +4,7 @@ class Venue < ApplicationRecord
   belongs_to :location
 
   validates :name, uniqueness: true
+  validates :name, presence: true 
 
   def location_attributes=(attributes_hash)
     if attributes_hash["name"].strip != ""

@@ -1,6 +1,4 @@
-# README
-
-# VR Places
+# README VR Places
 
 ## Description
 
