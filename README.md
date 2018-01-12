@@ -21,5 +21,5 @@ Let's get started!!!
 
 If you'd like to contribute, please read more about it [here.](https://github.com/Ccordova41/rails-VR-places/blob/master/CONTRIBUTING.md)
 
-##License
-Copyright (c) 2018 Catherine Cordova | Check out the full license [here!](https://github.com/Ccordova41/rails-VR-places/blob/master/LICENSE) 
+## License
+Copyright (c) 2018 Catherine Cordova | Check out the full license [here!](https://github.com/Ccordova41/rails-VR-places/blob/master/LICENSE)
