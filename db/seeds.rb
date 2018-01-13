@@ -19,6 +19,8 @@ venue_3 = Venue.create!(name: "Harvard's HUB for AR, VR, and Mixed Reality", des
 #experiences
 experience_1 = Experience.create!(title: "VR Cinema", genre: "cinema", description: "Watch 360 Videos", venue_id: venue_1.id)
 experience_2 = Experience.create!(title: "Mountain Climbing", genre: "nature", description: "Climb heights without the danger", venue_id: venue_2.id)
+experience_3 = Experience.create!(title: "A ZOMBIE SURVIVAL TUTORIAL", genre: "adventure", description: "Arizona Sunshine puts you in the midst of a zombie apocalypse. Handle weapons with real-life movements, freely explore a post-apocalyptic world, and put your survival skills to the test in VR – putting the undead back to rest is more thrilling than ever before.", venue_id: venue_1.id)
+experience_4 = Experience.create!(title: "THE OTHERWORLDLY PAINTING", genre: "nature", description: "Experience painting as you have never before. ", venue_id: venue_3.id)
 
 #categories
 action = Category.create!(name: "Action")
@@ -27,5 +29,5 @@ travel = Category.create!(name: "Travel")
 
 #experience_categories
 experience_categories = ExperienceCategory.create!(experience_id: experience_1.id, category_id: action.id)
-experience_categories_1 = ExperienceCategory.create!(experience_id: experience_1.id, category_id: adventure.id)
+experience_categories_1 = ExperienceCategory.create!(experience_id: experience_3.id, category_id: adventure.id)
 experience_categories_2 = ExperienceCategory.create!(experience_id: experience_2.id, category_id: travel.id)

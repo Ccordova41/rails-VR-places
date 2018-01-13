@@ -7,6 +7,10 @@ class User < ApplicationRecord
   has_many :user_experiences, dependent: :destroy
   has_many :experiences, through: :user_experiences
 
+  has_many :user_comments, dependent: :destroy
+  has_many :comments, through: :user_comments
+
+
   def username
     self.email.split("@")[0]
   end

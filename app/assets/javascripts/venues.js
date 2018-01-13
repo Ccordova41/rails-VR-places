@@ -6,7 +6,7 @@ class Venue {
   }
 
   render(){
-    var venueLi =  "<li>" + `<a href="/venues/${this.id}">` + `${this.name}` + "</a></li>"
+    var venueLi =  "<li> • " + `<a href="/venues/${this.id}">` + `${this.name}` + "</a></li>"
     return venueLi
   }
 }

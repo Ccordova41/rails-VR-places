@@ -7,6 +7,13 @@ class Experience < ApplicationRecord
   has_many :user_experiences, dependent: :destroy
   has_many :users, through: :user_experiences
 
+  has_many :user_comments, dependent: :destroy
+  has_many :comments, through: :user_comments
+
+
+  validates :title, presence: true
+  validates :title, uniqueness: true
+
     def venue_name=(name)
       self.venue = Venue.find_or_create_by(name: name)
     end

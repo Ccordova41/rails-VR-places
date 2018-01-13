@@ -2,7 +2,7 @@
  <h3>Welcome to the ultimate collection of Virtual Reality experiences and venues on this side of the universe.🌎
  Let's started! ALLONS-Y...</h3>
   <div class="filter">
-    <p> Filter awesomeness by Location: </p>
+    <p> Filter awesome Venues by Location: </p>
     <%= form_tag("/", method: "get") do %>
       <%= select_tag "location", options_from_collection_for_select(Location.all, "id", "name"), include_blank: true %>
       <%= submit_tag "Select" %>
@@ -14,7 +14,6 @@
     <% if user_signed_in? %>
       <%= link_to "Add Venue", new_venue_path %>
     <% end %>
-    <br><br>
   </div>
 
 <div id="venue_list">

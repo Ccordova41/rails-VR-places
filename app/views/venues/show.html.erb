@@ -13,12 +13,13 @@
   <ul>
     <% @venue.experiences.each do |experience| %>
       <li>
-        <%= experience.title %> -
-        <%= experience.genre %> -
+
+        - Title: <%= experience.title %> <br>
+        - Genre: <%= experience.genre %>
         <br>
         <%= link_to "View", venue_experience_path(@venue, experience) %>
         <%= render partial: 'venues/collection_signin', locals: {venue: @venue, experience: experience} %>
-      <br>
+      <br><br>
     </li>
     <% end %>
   </ul>
