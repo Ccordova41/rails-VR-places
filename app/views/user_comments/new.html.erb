@@ -1,0 +1,7 @@
+<div class="show">
+  <h2>Add New Comment:</h2>
+</div>
+
+<%= form_for @comments, url: experience_user_comments_path do |f| %>
+  <%= render partial: 'form', locals: {f: f} %>
+<% end %>

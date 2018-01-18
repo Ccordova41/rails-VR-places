@@ -11,7 +11,7 @@
 <div class="categories_list">
   <ul>
     <% @categories.alphabetical.each do |category| %>
-      <li><%= link_to category.name, category_path(category), id: "name" %></li>
+      <li><%= category.name %></li>
     <% end %>
   </ul>
 </div>

@@ -24,11 +24,18 @@
 <div class="categories_list">
     <strong>CATEGORIES:</strong>
     <% @experience.categories.each do |category| %>
-      <%= link_to category.name, category_path(category) %> |
+      <%= category.name %> |
     <% end %>
 </div>
 
+<% if user_signed_in? %>
 <div class="comments" id="<%=@experience.id%>" data-id="<%=@experience.venue.id%>">
+  <h3>Leave your comments down below!</h3>
   <ul>
   </ul>
 </div>
+
+  <%= form_for ([@experience, @comments]) do |f| %>
+    <%= render partial: 'user_comments/form', locals: {f: f} %>
+  <% end %>
+<% end %>

@@ -38,7 +38,21 @@ function next() {
         $(".categories_list").html(`<strong>Categories: </strong><a href="/categories/${category.id}">${category.name}</a>` + " | ")
       })
 
+      const { currentUser } = store.state
+      $(".comments ul").text("")
+      experienceData.user_comments.forEach(function(comment) {
+        if (currentUser && currentUser.id === comment.user_id && parseInt(nextExperienceId) === comment.experience_id) {
+          $(".comments ul").append("<li>" + comment.username + ": " + comment.comments + "</li>" + `<a href="/experiences/${experienceData.id}/user_comments/${comment.id}/edit">` + "Edit" + "</a>")
+        } else if (parseInt(nextExperienceId) !== comment.experience_id) {
+          $(".comments ul").append("")
+        } else if (currentUser && currentUser.id !== comment.user_id && parseInt(nextExperienceId) === comment.experience_id) {
+          $(".comments ul").append("<li>" + comment.username + ": " + comment.comments + "</li>")
+        }
+      })
+
       $(".button_to").attr('action', `/user_experiences?experience_id=${experienceData.id}`)
+      $(".new_user_comment").attr('action', `/experiences/${experienceData.id}/user_comments`)
+
     })
   })
 }

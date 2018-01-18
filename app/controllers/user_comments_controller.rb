@@ -43,7 +43,7 @@ class UserCommentsController < ApplicationController
     end
 
     def experience_var
-      @experience = Artwork.find_by(id: params[:experience_id])
+      @experience = Experience.find_by(id: params[:experience_id])
     end
 
 end
