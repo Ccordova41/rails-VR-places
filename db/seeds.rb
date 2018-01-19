@@ -13,7 +13,7 @@ location_3 = Location.create!(name: "Boston, MA")
 
 #venues
 venue_1 = Venue.create!(name: "Jump into the Light", description: "Jump Into The Light is America’s first virtual reality cinema, play lab and studio. Located on the Lower East Side of Manhattan, it provides an array of virtual- and augmented-reality experiences: skydive in VR; climb a mountain; fly around the world in 360° video; arcade and gaming experiences.", location_id: location_1.id)
-venue_2 = Venue.create!(name: "VR World", description: "VR World is the largest virtual reality experience center located in North America and the Western Hemisphere. It features the finest and most diverse virtual reality experiences that can be used in a public setting. Unlike other venues that concentrate on a single area or genre, VR World aims to deliver the best of virtual reality taking its guests to as many destinations as possible.", location_id: location_1.id)
+venue_2 = Venue.create!(name: "VR World", description: "VR World is the largest virtual reality experience center located in North America and the Western Hemisphere. It features the finest and most diverse virtual reality experiences that can be used in a public setting. Unlike other venues that concentrate on a single area or genre, VR World aims to deliver the best of virtual reality taking its guests to as many destinations as possible.", location_id: location_2.id)
 venue_3 = Venue.create!(name: "Harvard's HUB for AR, VR, and Mixed Reality", description: "Launched in November 2011, the Harvard Innovation Lab (i-lab) is a resource for any student at Harvard interested in entrepreneurship and innovation.", location_id: location_3.id)
 
 #experiences
