@@ -10,11 +10,6 @@ class User < ApplicationRecord
   has_many :user_comments, dependent: :destroy
   has_many :comments, through: :user_comments
 
-
-  def username
-    self.email.split("@")[0]
-  end
-
   def self.from_omniauth(auth)
      where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
        user.provider = auth.provider

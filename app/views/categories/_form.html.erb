@@ -1,5 +1,24 @@
-<% if user_signed_in? %>
-  <%= form_for ([@experience, @comments]) do |f| %>
-    <%= render partial: 'user_comments/form', locals: {f: f} %>
-  <% end %>
+<%= form_for category do |f| %>
+
+<div class="fields_with_errors">
+  <% if category.errors.any? %>
+    <ul>
+      <% category.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+    </ul>
+    <% end %>
+  <div class="fields_with_errors">
+
+  <div class="field">
+    <%= f.label :name, 'Category:' %><br>
+    <%= f.text-field :name %>
+  </div>
+  <br>
+
+  <div class="actions">
+    <%= f.submit 'Add One of Your Own' %>
+  </div>
+
+
 <% end %>
