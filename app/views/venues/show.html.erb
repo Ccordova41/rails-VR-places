@@ -2,12 +2,14 @@
   <h2><%= @venue.name %></h2>
   <p id="location">Location: <%= @venue.location.name %></p>
   <p>Description: <%= @venue.description %></p>
+  <p>Rating: <%= @venue.rating %> </p> 
 </div>
+
 
 <div class="add" id="add">
   <%= render partial: 'venues/signin', locals: {venue: @venue} %>
 </div>
-
+</br>
 <div class="collection_list">
   <h3>Collection of Experiences</h3>
   <ul>
@@ -16,11 +18,6 @@
         Title: <%= experience.title %></br>
         Genre: <%= experience.genre %>
         <br>
-
-        <span class="stars">4.8618164</span>
-      <span class="stars">2.6545344</span>
-      <span class="stars">0.5355</span>
-      <span class="stars">8</span>
 
         <%= link_to "View", venue_experience_path(@venue, experience) %>
         <%= render partial: 'venues/collection_signin', locals: {venue: @venue, experience: experience} %>

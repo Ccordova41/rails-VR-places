@@ -45,7 +45,7 @@ class VenuesController < ApplicationController
 
     private
       def venue_params
-        params.require(:venue).permit(:name, :description, :location_id, location_attributes: [:name])
+        params.require(:venue).permit(:name, :description, :rating, :location_id, location_attributes: [:name])
       end
       def venue_var
         @venue = Venue.find(params[:id])
