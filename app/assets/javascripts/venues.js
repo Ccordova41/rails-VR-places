@@ -2,14 +2,16 @@ class Venue {
   constructor(name, id, location_id) {
     this.name = name
     this.id = id
-    this.location_id = location_id
+    this.locationId = location_id
+
   }
 
   render(){
-    var venueLi =  "<li> • " + `<a href="/venues/${this.id}">` + `${this.name}` + "</a></li>"
+    const venueLi =  "<li> • " + `<a href="/venues/${this.id}">` + `${this.name}` + "</a></li>"
     return venueLi
   }
 }
+
 
 $(document).on('turbolinks:load', function() {
    renderVenues();
@@ -19,7 +21,7 @@ $(document).on('turbolinks:load', function() {
 function renderVenues() {
   $.get('/hello.json', function(data) {
     data.forEach(function(venue) {
-      var html = new Venue(venue.name, venue.id, venue.location_id).render();
+      var html = new Venue(venue.name, venue.id, venue.locationId).render();
       $("#venue_list ul").append(html);
     })
   })
@@ -32,7 +34,7 @@ function filterVenues() {
     var location = parseInt($(".filter option:selected").val());
     if(location){
       $.get('/hello.json', function(data) {
-        data.forEach(function(venue) {
+        data.forEach(venue => {
           if (venue.location_id === location) {
             var html = new Venue(venue.name, venue.id, venue.location_id).render();
             $("#venue_list ul").append(html);

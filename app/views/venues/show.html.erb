@@ -13,10 +13,15 @@
   <ul>
     <% @venue.experiences.each do |experience| %>
       <li>
-
-        - Title: <%= experience.title %> <br>
-        - Genre: <%= experience.genre %>
+        Title: <%= experience.title %></br>
+        Genre: <%= experience.genre %>
         <br>
+
+        <span class="stars">4.8618164</span>
+      <span class="stars">2.6545344</span>
+      <span class="stars">0.5355</span>
+      <span class="stars">8</span>
+
         <%= link_to "View", venue_experience_path(@venue, experience) %>
         <%= render partial: 'venues/collection_signin', locals: {venue: @venue, experience: experience} %>
       <br><br>

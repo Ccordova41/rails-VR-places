@@ -1,7 +1,7 @@
 <%= form_for experience do |f| %>
   <%= f.hidden_field :venue_id %>
 
-  <div class:"fields_with_errors">
+  <div class:"fields_with_errors" id="errors" >
     <% if @experience.errors.any? %>
       <ul>
         <% @experience.errors.full_messages.each do |msg| %>

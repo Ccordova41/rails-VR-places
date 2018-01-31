@@ -5,7 +5,7 @@ $(document).on("turbolinks:load", function() {
   next();
 })
 
-var store = {
+const store = {
   state: {
     experienceIds: [],
     currentExperienceId: undefined,
@@ -16,7 +16,7 @@ var store = {
 
 function getNextExperienceId() {
   const { experienceIds, currentExperienceId } = store.state
-  var index = experienceIds.findIndex(id => id === currentExperienceId)
+  const index = experienceIds.findIndex(id => id === currentExperienceId)
   if (index === experienceIds.length - 1) {
     return experienceIds[0]
   }

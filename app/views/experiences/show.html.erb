@@ -38,4 +38,12 @@
   <%= form_for ([@experience, @comments]) do |f| %>
     <%= render partial: 'user_comments/form', locals: {f: f} %>
   <% end %>
+<br>
+  <div class="rating" id="<%=@experience.id%>" data-id="<%=@experience.venue.id%>">
+    <h3>Leave a rating</h3>
+
+    <ul>
+    </ul>
+  </div>
+
 <% end %>

@@ -1,5 +1,5 @@
 <%= form_for venue do |f| %>
-  <div class:"fields_with_errors">
+  <div class:"fields_with_errors" id= "errors">
     <% if venue.errors.any? %>
       <ul>
         <% venue.errors.full_messages.each do |msg| %>

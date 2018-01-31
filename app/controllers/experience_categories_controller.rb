@@ -1,2 +1,0 @@
-class ExperienceCategoriesController < ApplicationController
-end

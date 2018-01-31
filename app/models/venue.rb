@@ -4,7 +4,7 @@ class Venue < ApplicationRecord
   belongs_to :location
 
   validates :name, uniqueness: true
-  validates :name, presence: true 
+  validates :name, presence: true
 
   def location_attributes=(attributes_hash)
     if attributes_hash["name"].strip != ""
@@ -18,4 +18,15 @@ class Venue < ApplicationRecord
   def self.best_experiences
     joins(:experiences).group(:id).order("count(*) DESC").limit(3)
   end
+
+  # def highest_rated
+  #   .select("venues.id, avg(comments.rating) as average_rating, count(comments.id) as number_of_comments")
+  #   joins(:venues).group("venues.id").order("average_rating DESC, number_of_comments DESC")
+  # end
 end
+
+
+# @items = Item.where(:shop_name => @shop.name).joins(:reviews)
+#   .select("items.id, avg(reviews.rating) as average_rating, count(reviews.id) as number_of_reviews")
+#   .group("items.id")
+#   .order("average_rating DESC, number_of_reviews DESC")

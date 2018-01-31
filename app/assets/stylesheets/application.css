@@ -64,10 +64,23 @@ div#venue_list li {
   max-width: 600px;
 }
 
-
+div#errors ul {
+  color: red;
+}
 /* venue page */
 
 div.show h2 {
   color: #C0B9DD;
   font-size: 20px;
+}
+
+span.stars, span.stars span {
+    display: block;
+    background: url(stars.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px;
+}
+
+span.stars span {
+    background-position: 0 0;
 }
