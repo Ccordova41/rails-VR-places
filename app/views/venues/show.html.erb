@@ -2,7 +2,7 @@
   <h2><%= @venue.name %></h2>
   <p id="location">Location: <%= @venue.location.name %></p>
   <p>Description: <%= @venue.description %></p>
-  <p>Rating: <%= @venue.rating %> </p> 
+  <p>Rating: <%= @venue.rating %> <%= pluralize(@venue.rating, 'Star').split(" ", 2)[1] %></p>
 </div>
 
 

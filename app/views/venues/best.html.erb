@@ -3,8 +3,9 @@
   <p>
     <% @venues.each do |venue| %>
       <%= link_to venue.name, venue_path(venue) %><br>
-      <%= pluralize(venue.experiences.count, "experience")%><br><br>
-    
+      <%= pluralize(venue.experiences.count, "experience")%><br>
+      Rating: <%= venue.rating %> <%= pluralize(venue.rating, 'Star').split(" ", 2)[1] %>
+<br><br>
     <% end %>
   </p>
 </div>
