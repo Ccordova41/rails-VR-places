@@ -5,7 +5,7 @@ class Venue < ApplicationRecord
 
   validates :name, uniqueness: true
   validates :name, presence: true
-  validates :rating, :numericality => { greater_than_or_equal_to: 1, less_than: 5 }
+  validates :rating, :numericality => { greater_than_or_equal_to: 1, less_than_or_equal_to: 5 }
 
   def location_attributes=(attributes_hash)
     if attributes_hash["name"].strip != ""
