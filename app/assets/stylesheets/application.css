@@ -32,7 +32,10 @@ div.content {
   margin: auto;
   font-size: 20px;
   font-family: 'Amatic SC', cursive;
+}
 
+a:hover, a:visited, a:link, a:active {
+    text-decoration: none;
 }
 
 /* ===================== Navigation ===================== */
@@ -41,8 +44,6 @@ nav {
   text-transform: uppercase;
   font-size: 23px;
   font-family: 'Quicksand', sans-serif;
-  /*padding: 10px;
-  padding-top: 30px;*/
   background: #fff;
   color: #000;
 }
@@ -51,7 +52,7 @@ nav #navigator-list {
     display: grid;
 }
 
- #logo {
+#logo {
   text-align: left;
   grid-column: 1;
   grid-row: 1;
@@ -59,37 +60,31 @@ nav #navigator-list {
 }
 
 nav li {
-  color: yellow;
+  /*color: yellow;*/
   grid-column: 2;
   grid-row: 1;
-  margin-top: 28.635px;
+  margin: inherit;
+  padding-top: 10px;
   padding-right: 40px;
-  color:
-/*margin-top: 23px;*/
+
 }
 
 
-li #nav-links a {
+/*li #nav-links a {
   color: pink;
   padding: 0 auto;
-}
-
-
-/*linear-gradient(-90deg, #EB9FEF, #05A7C3);*/
-
-
-
-
-
+}*/
 
 nav ul a:link {
-  color: #99B2DD;
+  color: black;
+  padding: 10px;
+  font-size: 15px;
 }
 
-nav ul a:visited {
+/*nav ul a:visited {
   color: #614e89;
 
-}
+}*/
 
 h3 {
   color: #B1B4DD;
