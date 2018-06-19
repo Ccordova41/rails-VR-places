@@ -3,7 +3,7 @@ class Venue < ApplicationRecord
   has_many :experiences, dependent: :destroy
   belongs_to :location
 
-  validates :name, uniqueness: true
+  # validates :name, uniqueness: true
   validates :name, presence: true
   validates :rating, :numericality => { greater_than_or_equal_to: 1, less_than_or_equal_to: 5 }
 

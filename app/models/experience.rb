@@ -12,7 +12,7 @@ class Experience < ApplicationRecord
 
 
   validates :title, presence: true
-  validates :title, uniqueness: true
+  # validates :title, uniqueness: true
 
     def venue_name=(name)
       self.venue = Venue.find_or_create_by(name: name)
