@@ -1,7 +1,8 @@
 <nav>
-  <ul>
-    <%= link_to "Home", root_path %> |
+  <ul id="navigator-list">
+    <h2 id="logo">VR Guide</h2>
+    <li id="nav-links"><%= link_to "Home", root_path %> |
     <%= link_to "Best Venues", best_experiences_path %> |
-    <%= render partial: 'layouts/signin' %>
+    <%= render partial: 'layouts/signin' %></li>
   </ul>
 </nav>

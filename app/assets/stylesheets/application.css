@@ -18,8 +18,14 @@
 
 body {
   background-color: #C9FBFF;
-
+  margin: 0;
+	padding: 0;
+	position: relative;
+	max-width: 100%;
+	overflow-x: hidden;
+  margin-top: -23px;
 }
+
 div.content {
   text-align: right;
   max-width: 600px;
@@ -29,12 +35,52 @@ div.content {
 
 }
 
+/* ===================== Navigation ===================== */
 nav {
-  text-align: left;
+  text-align: right;
   text-transform: uppercase;
   font-size: 23px;
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Quicksand', sans-serif;
+  /*padding: 10px;
+  padding-top: 30px;*/
+  background: #fff;
+  color: #000;
 }
+
+nav #navigator-list {
+    display: grid;
+}
+
+ #logo {
+  text-align: left;
+  grid-column: 1;
+  grid-row: 1;
+  font-family: 'Jura', sans-serif;
+}
+
+nav li {
+  color: yellow;
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 28.635px;
+  padding-right: 40px;
+  color:
+/*margin-top: 23px;*/
+}
+
+
+li #nav-links a {
+  color: pink;
+  padding: 0 auto;
+}
+
+
+/*linear-gradient(-90deg, #EB9FEF, #05A7C3);*/
+
+
+
+
+
 
 nav ul a:link {
   color: #99B2DD;
