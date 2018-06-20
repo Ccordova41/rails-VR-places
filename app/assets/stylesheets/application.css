@@ -16,6 +16,13 @@
 
 /* page content */
 
+
+body,td,th,p {
+  font-family: 'Quicksand', sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
+
 body {
   background-color: white;
 	max-width: 100%;
@@ -94,25 +101,10 @@ nav li {
 
 }
 
-
-/*li #nav-links a {
-  color: pink;
-  padding: 0 auto;
-}*/
-
 nav ul a:link {
   color: black;
   padding: 10px;
   font-size: 15px;
-}
-
-/*nav ul a:visited {
-  color: #614e89;
-
-}*/
-
-h3 {
-  color: #B1B4DD;
 }
 
 ul {
@@ -120,9 +112,6 @@ ul {
 }
 /* home page */
 
-div.filter p {
-  color: #80A1D4;
-}
 
 div#venue_list li {
   color: black;
@@ -143,7 +132,7 @@ div.show h2 {
 /*================ Banner ================*/
 
 #banner {
-  /*background-color: rgba(0, 173, 194, 0.7);*/
+  background-color: rgba(0, 173, 194, 0.7);
   background-image: url("vr2.png");
   background-repeat: no-repeat;
   width: 100%;
@@ -152,13 +141,39 @@ div.show h2 {
 }
 
 
+/*================ Filter ================*/
+
+.filter {
+  /*color: #80A1D4;*/
+  background-color: #07CBED;
+  padding-left: 20px;
+  padding-top: 20px;
+}
 
 
+.filter h3  {
+  margin: 0;
+  margin-bottom: 15px; 
+}
 
 
+/*===Search button===*/
+input {
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+  padding: 10px 20px;
+  text-align: center;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  font-size: 16px;
+  margin-left: 10px;
+}
 
-
-
+input:hover {
+    background-color: #008CBA;
+    color: white;
+}
 
 /* ============== Rating =============== */
 .rating {

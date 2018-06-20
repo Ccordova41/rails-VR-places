@@ -3,10 +3,10 @@
 
 
   <section class="filter">
-    <p> Filter Venues by Location: </p>
+    <h3> Filter Venues by Location: </h3>
     <%= form_tag("/", method: "get") do %>
       <%= select_tag "location", options_from_collection_for_select(Location.all, "id", "name"), include_blank: true %>
-      <%= submit_tag "Select" %>
+      <%= submit_tag "Search!" %>
     <% end %>
     <br>
   </section>
