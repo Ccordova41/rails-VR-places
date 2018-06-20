@@ -1,22 +1,15 @@
-<main id="maincontent">
-
-  <section id="banner">
-
-
-    <p>Virtual Reality is </p>
-    <h3>Welcome to the ultimate collection of Virtual Reality experiences and venues on this side of the universe.🌎
-     Let's started! ALLONS-Y...</h3>
-  </section>
+<section id="banner">
+</section>
 
 
-  <div class="filter">
-    <p> Filter awesome Venues by Location: </p>
+  <section class="filter">
+    <p> Filter Venues by Location: </p>
     <%= form_tag("/", method: "get") do %>
       <%= select_tag "location", options_from_collection_for_select(Location.all, "id", "name"), include_blank: true %>
       <%= submit_tag "Select" %>
     <% end %>
     <br>
-  </div>
+  </section>
 
   <div class="add">
     <% if user_signed_in? %>
@@ -27,4 +20,3 @@
   <div id="venue_list">
     <ul> </ul>
   </div>
-</main>

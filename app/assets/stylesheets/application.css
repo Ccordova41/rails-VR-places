@@ -17,13 +17,11 @@
 /* page content */
 
 body {
-  background-color: #C9FBFF;
-  margin: 0;
-	padding: 0;
-	position: relative;
+  background-color: white;
 	max-width: 100%;
 	overflow-x: hidden;
-  margin-top: -23px;
+  /*margin-top: -23px;*/
+  margin: 0;
 }
 
 article,
@@ -53,6 +51,17 @@ a:hover, a:visited, a:link, a:active {
     text-decoration: none;
 }
 
+#footer {
+  background-color: #444;
+  color: #aaa;
+  display: block;
+  font-size: 8pt;
+  letter-spacing: 1px;
+  padding: 25px 0 25px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 /* ===================== Navigation ===================== */
 nav {
   text-align: right;
@@ -72,14 +81,15 @@ nav #navigator-list {
   grid-column: 1;
   grid-row: 1;
   font-family: 'Jura', sans-serif;
+  margin: 0;
 }
 
 nav li {
   /*color: yellow;*/
   grid-column: 2;
   grid-row: 1;
-  margin: inherit;
-  padding-top: 10px;
+  /*margin: inherit;*/
+  padding-top: -10px;
   padding-right: 40px;
 
 }
@@ -130,8 +140,27 @@ div.show h2 {
   font-size: 20px;
 }
 
+/*================ Banner ================*/
 
-/* rating */
+#banner {
+  /*background-color: rgba(0, 173, 194, 0.7);*/
+  background-image: url("vr2.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+  margin: 0;
+}
+
+
+
+
+
+
+
+
+
+
+/* ============== Rating =============== */
 .rating {
     float:right;
     width: 250px;
@@ -187,18 +216,4 @@ div.show h2 {
     position:relative;
     top:2px;
     left:2px;
-}
-
-
-/*======= Footer =======*/
-
-#footer {
-  background-color: #444;
-  color: #aaa;
-  display: block;
-  font-size: 8pt;
-  letter-spacing: 1px;
-  padding: 25px 0 25px;
-  text-align: center;
-  text-transform: uppercase;
 }
