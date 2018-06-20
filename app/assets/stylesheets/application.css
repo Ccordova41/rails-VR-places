@@ -26,6 +26,21 @@ body {
   margin-top: -23px;
 }
 
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+
 div.content {
   text-align: right;
   max-width: 600px;
@@ -172,4 +187,18 @@ div.show h2 {
     position:relative;
     top:2px;
     left:2px;
+}
+
+
+/*======= Footer =======*/
+
+#footer {
+  background-color: #444;
+  color: #aaa;
+  display: block;
+  font-size: 8pt;
+  letter-spacing: 1px;
+  padding: 25px 0 25px;
+  text-align: center;
+  text-transform: uppercase;
 }
