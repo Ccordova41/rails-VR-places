@@ -146,18 +146,18 @@ div.show h2 {
 .filter {
   /*color: #80A1D4;*/
   background-color: #07CBED;
-  padding-left: 20px;
+  padding-left: 50px;
   padding-top: 20px;
 }
 
 
 .filter h3  {
   margin: 0;
-  margin-bottom: 15px; 
+  margin-bottom: 15px;
 }
 
 
-/*===Search button===*/
+/*============ Search button ===========*/
 input {
   background-color: white;
   color: black;
@@ -175,10 +175,44 @@ input:hover {
     color: white;
 }
 
+/*============ Search button ===========*/
+
+#venue_list ul {
+  /*background-color: red;*/
+  text-align: center;
+}
+
+#venue_list  li {
+  text-align: center;
+  margin: 20px;
+  width: 270px;
+  display: inline-grid;
+  height: auto;
+  border: 1px solid;
+  box-sizing: border-box;
+  max-height: 300px;
+  min-height: 250px;
+  height: 30px;
+}
+
+
+#venue_list  li a {
+  background-color: black;
+  opacity: .8;
+  max-height: 60px;
+  color: white;
+  padding-top: 10px;
+}
+
+#venue_list  li a:hover {
+  font-size: 20px;
+  color: #00ccea; 
+}
 /* ============== Rating =============== */
 .rating {
     float:right;
     width: 250px;
+
 }
 
 /* :not(:checked) is a filter, so that browsers that don’t support :checked don’t

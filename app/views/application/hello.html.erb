@@ -2,21 +2,23 @@
 </section>
 
 
-  <section class="filter">
-    <h3> Filter Venues by Location: </h3>
-    <%= form_tag("/", method: "get") do %>
-      <%= select_tag "location", options_from_collection_for_select(Location.all, "id", "name"), include_blank: true %>
-      <%= submit_tag "Search!" %>
-    <% end %>
-    <br>
-  </section>
+<section class="filter">
+  <h3> Filter Venues by Location: </h3>
+  <%= form_tag("/", method: "get") do %>
+    <%= select_tag "location", options_from_collection_for_select(Location.all, "id", "name"), include_blank: true %>
+    <%= submit_tag "Search!" %>
+  <% end %>
+  <br>
+</section>
 
-  <div class="add">
-    <% if user_signed_in? %>
-      <%= link_to "Add Venue", new_venue_path %>
-    <% end %>
-  </div>
+<div class="add">
+  <% if user_signed_in? %>
+    <%= link_to "Add Venue", new_venue_path %>
+  <% end %>
+</div>
 
-  <div id="venue_list">
+<section id="venue_list">
+  <div>
     <ul> </ul>
   </div>
+</section>
