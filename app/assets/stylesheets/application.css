@@ -27,7 +27,6 @@ body {
   background-color: white;
 	max-width: 100%;
 	overflow-x: hidden;
-  /*margin-top: -23px;*/
   margin: 0;
 }
 
@@ -59,7 +58,8 @@ a:hover, a:visited, a:link, a:active {
 }
 
 #footer {
-  background-color: #444;
+  background-color: black;
+  opacity: .8;
   color: #aaa;
   display: block;
   font-size: 8pt;
@@ -206,7 +206,7 @@ input:hover {
 
 #venue_list  li a:hover {
   font-size: 20px;
-  color: #00ccea; 
+  color: #00ccea;
 }
 /* ============== Rating =============== */
 .rating {

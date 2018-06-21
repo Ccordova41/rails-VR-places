@@ -3,10 +3,16 @@
 
 
 <section class="filter">
+  <div id="typed-strings">
+    <p>Typed.js is a <strong>JavaScript</strong> library.</p>
+    <p>It <em>types</em> out sentences.</p>
+</div>
+<span id="typed"></span>
+
   <h3> Filter Venues by Location: </h3>
   <%= form_tag("/", method: "get") do %>
     <%= select_tag "location", options_from_collection_for_select(Location.all, "id", "name"), include_blank: true %>
-    <%= submit_tag "Search!" %>
+    <%= submit_tag "Go!" %>
   <% end %>
   <br>
 </section>

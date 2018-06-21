@@ -2,6 +2,7 @@
   "name": "rails-VR-places",
   "private": true,
   "dependencies": {
-    "typed.js": "^2.0.8"
+    "typed.js": "^2.0.8",
+    "yarn": "^1.7.0"
   }
 }
