@@ -69,6 +69,7 @@ a:hover, a:visited, a:link, a:active {
   text-transform: uppercase;
 }
 
+
 /* ===================== Navigation ===================== */
 nav {
   text-align: right;
@@ -129,6 +130,9 @@ div.show h2 {
   font-size: 20px;
 }
 
+.typed-cursor {
+  color: red; 
+}
 /*================ Banner ================*/
 
 #banner {
